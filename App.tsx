@@ -5,6 +5,9 @@ import { Poppins_400Regular } from "@expo-google-fonts/poppins";
 import { LoginScreen } from "./screens/LoginScreen";
 import { LoginForm } from "./screens/LoginForm";
 import { SignInScreen } from "./screens/SignInScreen";
+import { ForgotPassword } from "./screens/ForgotPasswordScreen";
+import { HomeScreen } from "./screens/HomeScreen";
+import { VehicleDetailScreen } from "./screens/VehicleDetailScreen";
 
 const Stack = createStackNavigator();
 
@@ -30,6 +33,21 @@ export default function App() {
           options={{ headerShown: false }}
           name="LoginForm"
           component={LoginForm}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="ForgotPassword"
+          component={ForgotPassword}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="HomeScreen"
+          component={HomeScreen}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="VehicleDetailScreen"
+          component={VehicleDetailScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

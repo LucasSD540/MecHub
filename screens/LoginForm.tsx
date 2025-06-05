@@ -115,5 +115,6 @@ export const styles = StyleSheet.create({
   bottomTabImage: {
     position: "absolute",
     bottom: 0,
+    zIndex: 2,
   },
 });

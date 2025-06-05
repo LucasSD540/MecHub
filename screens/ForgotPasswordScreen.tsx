@@ -1,12 +1,14 @@
-import { Image, Pressable, TextInput, View, StyleSheet } from "react-native";
+import { Image, Pressable, View, StyleSheet, TextInput } from "react-native";
 import { AppText } from "../components/AppText";
 
-export const SignInScreen = ({ navigation }: any) => {
+export const ForgotPassword = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
-      <AppText style={styles.titlePageText}>Suas Credenciais</AppText>
+      <AppText style={styles.titlePageText}>
+        Enviar e-mail de recuperação de senha
+      </AppText>
       <Pressable
-        onPress={() => navigation.navigate("LoginScreen")}
+        onPress={() => navigation.navigate("SignInScreen")}
         style={styles.buttonDiv}
       >
         <Image source={require("../assets/return_button.png")} />
@@ -16,21 +18,9 @@ export const SignInScreen = ({ navigation }: any) => {
           <AppText style={styles.inputName}>E-mail</AppText>
           <TextInput style={styles.input} />
         </View>
-        <View style={styles.inputDiv}>
-          <AppText style={styles.inputName}>Senha</AppText>
-          <TextInput style={styles.input} />
-        </View>
       </View>
-      <View style={styles.forgotDiv}>
-        <Pressable onPress={() => navigation.navigate("ForgotPassword")}>
-          <AppText style={styles.forgotPassword}>Esqueci minha senha</AppText>
-        </Pressable>
-      </View>
-      <Pressable
-        onPress={() => navigation.navigate("HomeScreen")}
-        style={styles.button}
-      >
-        <AppText style={styles.buttonText}>Entrar</AppText>
+      <Pressable style={styles.button}>
+        <AppText style={styles.buttonText}>Enviar</AppText>
       </Pressable>
       <Image
         style={styles.retangle}
@@ -64,18 +54,6 @@ export const styles = StyleSheet.create({
   inputContainer: {
     width: "100%",
     marginTop: 84,
-  },
-  forgotDiv: {
-    width: 326,
-  },
-  forgotPassword: {
-    fontSize: 12,
-    color: "#37B6E9",
-    justifyContent: "center",
-    marginTop: 8,
-    borderBottomColor: "#37B6E9",
-    borderBottomWidth: 1.5,
-    width: 130,
   },
   inputDiv: {
     position: "relative",
