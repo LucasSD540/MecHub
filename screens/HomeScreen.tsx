@@ -7,7 +7,9 @@ export const HomeScreen = ({ navigation }: any) => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <AppText style={styles.pageTitle}>VEÍCULOS</AppText>
+        <Pressable onPress={() => navigation.navigate("RegisterVehicleScreen")}>
+          <AppText style={styles.pageTitle}>VEÍCULOS</AppText>
+        </Pressable>
         <View style={styles.cardContainer}>
           <Pressable onPress={() => navigation.navigate("VehicleDetailScreen")}>
             <FavoriteCard

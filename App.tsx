@@ -1,5 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import BottomTabs from "./navigation/BottomTabs";
 import { useFonts } from "expo-font";
 import { Poppins_400Regular } from "@expo-google-fonts/poppins";
 import { LoginScreen } from "./screens/LoginScreen";
@@ -8,6 +9,7 @@ import { SignInScreen } from "./screens/SignInScreen";
 import { ForgotPassword } from "./screens/ForgotPasswordScreen";
 import { HomeScreen } from "./screens/HomeScreen";
 import { VehicleDetailScreen } from "./screens/VehicleDetailScreen";
+import { RegisterVehicleScreen } from "./screens/RegisterVehicleScreen";
 
 const Stack = createStackNavigator();
 
@@ -42,12 +44,17 @@ export default function App() {
         <Stack.Screen
           options={{ headerShown: false }}
           name="HomeScreen"
-          component={HomeScreen}
+          component={BottomTabs}
         />
         <Stack.Screen
           options={{ headerShown: false }}
           name="VehicleDetailScreen"
           component={VehicleDetailScreen}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="RegisterVehicleScreen"
+          component={RegisterVehicleScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
